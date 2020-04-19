@@ -16,5 +16,17 @@ namespace Login1New
         {
             InitializeComponent();
         }
+
+        public void Btn_usuario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            VentanaAdminUsuario VentUsu = new VentanaAdminUsuario();
+            VentUsu.Show();
+        }
+
+        private void VentanaAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
