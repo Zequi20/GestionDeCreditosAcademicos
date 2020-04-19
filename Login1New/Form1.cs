@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using ClassLibrary1;
-using System.Data;
+//using ClassLibrary1;
 
 namespace Login1New
 {
@@ -31,11 +30,31 @@ namespace Login1New
                 string usuario = ds.Tables[0].Rows[0]["usuario"].ToString().Trim();
                 string contraseña = ds.Tables[0].Rows[0]["contraseña"].ToString().Trim();
 
-                if(usuario==txtBoxUsu.Text.Trim() && contraseña==txtBoxPass.Text.Trim())
-                {
-                    Form1 login = new Form1();
-                    this.Hide();
-                    MessageBox.Show("Se ha iniciado sesion.");                    
+                if (usuario==txtBoxUsu.Text.Trim() && contraseña==txtBoxPass.Text.Trim())
+                {                    
+                    if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==0)
+                    {
+                        VentanaAdmin VenAd = new VentanaAdmin();
+                        this.Hide();
+                        VenAd.Show();
+
+                    }
+                    else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==1)
+                    {
+                        VentanaDocente VenDoc = new VentanaDocente();
+                        this.Hide();
+                        VenDoc.Show();
+                    }
+                    else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==2)
+                    {
+                        VentanaUsuario VenUsu = new VentanaUsuario();
+                        this.Hide();
+                        VenUsu.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha fallado el sistema.");
+                    }
                 }
             }
             catch(Exception error)

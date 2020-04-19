@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace ClassLibrary1 //Libreria que contiene la conexion y para la entrada a la base de datos
+namespace Login1New
 {
     public class Utilidades
     {
@@ -17,7 +17,7 @@ namespace ClassLibrary1 //Libreria que contiene la conexion y para la entrada a 
             Con.Open(); //abre la base de datos
 
             DataSet DS = new DataSet(); // Una variable dataset para ir cargando los resultados del comando
-            SqlDataAdapter DP = new SqlDataAdapter(cmd,Con); // adapta el comando con la base de datos
+            SqlDataAdapter DP = new SqlDataAdapter(cmd, Con); // adapta el comando con la base de datos
 
             DP.Fill(DS); // 
 
@@ -25,7 +25,5 @@ namespace ClassLibrary1 //Libreria que contiene la conexion y para la entrada a 
 
             return DS; //retorna un dataset con los pedidos
         }
-
-
     }
 }
