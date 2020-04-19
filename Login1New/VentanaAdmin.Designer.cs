@@ -46,7 +46,7 @@
             // 
             // Btn_usuario
             // 
-            this.Btn_usuario.Location = new System.Drawing.Point(48, 230);
+            this.Btn_usuario.Location = new System.Drawing.Point(193, 131);
             this.Btn_usuario.Name = "Btn_usuario";
             this.Btn_usuario.Size = new System.Drawing.Size(75, 23);
             this.Btn_usuario.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // Btn_docente
             // 
-            this.Btn_docente.Location = new System.Drawing.Point(193, 230);
+            this.Btn_docente.Location = new System.Drawing.Point(193, 176);
             this.Btn_docente.Name = "Btn_docente";
             this.Btn_docente.Size = new System.Drawing.Size(75, 23);
             this.Btn_docente.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             // Btn_reglamento
             // 
-            this.Btn_reglamento.Location = new System.Drawing.Point(324, 230);
+            this.Btn_reglamento.Location = new System.Drawing.Point(180, 226);
             this.Btn_reglamento.Name = "Btn_reglamento";
             this.Btn_reglamento.Size = new System.Drawing.Size(112, 22);
             this.Btn_reglamento.TabIndex = 4;
