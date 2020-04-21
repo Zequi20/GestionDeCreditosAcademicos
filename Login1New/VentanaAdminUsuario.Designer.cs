@@ -66,6 +66,7 @@
             this.Btn_elim_usu.TabIndex = 2;
             this.Btn_elim_usu.Text = "Eliminar Usuario";
             this.Btn_elim_usu.UseVisualStyleBackColor = true;
+            this.Btn_elim_usu.Click += new System.EventHandler(this.Btn_elim_usu_Click);
             // 
             // Btn_atras
             // 
