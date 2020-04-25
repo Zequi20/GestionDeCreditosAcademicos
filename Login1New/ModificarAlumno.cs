@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Login1New
 {
-    public partial class VentanaDocente : Form
+    public partial class ModificarAlumno : Form
     {
-        public VentanaDocente()
+        string nom;
+        public ModificarAlumno()
         {
             InitializeComponent();
+        }
+
+        private void ModificarAlumno_Load(object sender, EventArgs e)
+        {
+            label2.Text = nom;
         }
     }
 }

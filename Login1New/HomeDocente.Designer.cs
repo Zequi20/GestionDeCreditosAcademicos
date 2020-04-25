@@ -1,6 +1,6 @@
 ﻿namespace Login1New
 {
-    partial class VentanaDocente
+    partial class HomeDocente
     {
         /// <summary>
         /// Required designer variable.
@@ -40,14 +40,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Soy el docente";
             // 
-            // VentanaDocente
+            // HomeDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.label1);
-            this.Name = "VentanaDocente";
-            this.Text = "VentanaDocente";
+            this.Name = "HomeDocente";
+            this.Text = "Home Docente";
             this.ResumeLayout(false);
             this.PerformLayout();
 

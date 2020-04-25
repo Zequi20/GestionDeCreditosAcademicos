@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-//using ClassLibrary1;
 
 namespace Login1New
 {
@@ -34,20 +33,20 @@ namespace Login1New
                 {                    
                     if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==0)
                     {
-                        VentanaAdmin VenAd = new VentanaAdmin();
+                        HomeAdministrador VenAd = new HomeAdministrador();
                         this.Hide();
                         VenAd.Show();
 
                     }
                     else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==1)
                     {
-                        VentanaDocente VenDoc = new VentanaDocente();
+                        HomeDocente VenDoc = new HomeDocente();
                         this.Hide();
                         VenDoc.Show();
                     }
                     else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==2)
                     {
-                        VentanaUsuario VenUsu = new VentanaUsuario();
+                        HomeAlumno VenUsu = new HomeAlumno();
                         this.Hide();
                         VenUsu.Show();
                     }

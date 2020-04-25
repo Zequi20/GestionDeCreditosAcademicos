@@ -1,6 +1,6 @@
 ﻿namespace Login1New
 {
-    partial class VentanaAdminUsuario
+    partial class Alumno
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btn_añadir_usu
@@ -45,7 +46,7 @@
             this.Btn_añadir_usu.Name = "Btn_añadir_usu";
             this.Btn_añadir_usu.Size = new System.Drawing.Size(171, 55);
             this.Btn_añadir_usu.TabIndex = 0;
-            this.Btn_añadir_usu.Text = "Añadir Usuario";
+            this.Btn_añadir_usu.Text = "Añadir Alumno";
             this.Btn_añadir_usu.UseVisualStyleBackColor = true;
             this.Btn_añadir_usu.Click += new System.EventHandler(this.Btn_añadir_usu_Click);
             // 
@@ -57,6 +58,7 @@
             this.Btn_modif_usu.TabIndex = 1;
             this.Btn_modif_usu.Text = "Modificar Usuario";
             this.Btn_modif_usu.UseVisualStyleBackColor = true;
+            this.Btn_modif_usu.Click += new System.EventHandler(this.Btn_modif_usu_Click);
             // 
             // Btn_elim_usu
             // 
@@ -64,9 +66,9 @@
             this.Btn_elim_usu.Name = "Btn_elim_usu";
             this.Btn_elim_usu.Size = new System.Drawing.Size(168, 56);
             this.Btn_elim_usu.TabIndex = 2;
-            this.Btn_elim_usu.Text = "Eliminar Usuario";
+            this.Btn_elim_usu.Text = "Eliminar Alumno";
             this.Btn_elim_usu.UseVisualStyleBackColor = true;
-            this.Btn_elim_usu.Click += new System.EventHandler(this.Btn_elim_usu_Click);
+            this.Btn_elim_usu.Click += new System.EventHandler(this.Btn_elim_usu_Click_1);
             // 
             // Btn_atras
             // 
@@ -76,6 +78,7 @@
             this.Btn_atras.TabIndex = 3;
             this.Btn_atras.Text = "Atras";
             this.Btn_atras.UseVisualStyleBackColor = true;
+            this.Btn_atras.Click += new System.EventHandler(this.Btn_atras_Click);
             // 
             // Btn_aceptar
             // 
@@ -93,6 +96,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.Visible = false;
             // 
             // label1
             // 
@@ -104,6 +108,7 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "-----";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Visible = false;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -116,6 +121,7 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "-----";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Visible = false;
             // 
             // textBox2
             // 
@@ -123,13 +129,25 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(211, 20);
             this.textBox2.TabIndex = 8;
+            this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // VentanaAdminUsuario
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(465, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "-------";
+            this.label3.Visible = false;
+            // 
+            // Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 451);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -139,8 +157,8 @@
             this.Controls.Add(this.Btn_elim_usu);
             this.Controls.Add(this.Btn_modif_usu);
             this.Controls.Add(this.Btn_añadir_usu);
-            this.Name = "VentanaAdminUsuario";
-            this.Text = "VentanaAdminUsuario";
+            this.Name = "Alumno";
+            this.Text = "Alumno";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +175,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
     }
 }

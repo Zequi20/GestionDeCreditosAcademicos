@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Login1New
 {
-    public partial class VentanaAdmin : Form
+    public partial class HomeAdministrador : Form
     {
-        public VentanaAdmin()
+        public HomeAdministrador()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace Login1New
         public void Btn_usuario_Click(object sender, EventArgs e)
         {
             this.Hide();
-            VentanaAdminUsuario VentUsu = new VentanaAdminUsuario();
+            Alumno VentUsu = new Alumno();
             VentUsu.Show();
         }
 

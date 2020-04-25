@@ -1,6 +1,6 @@
 ﻿namespace Login1New
 {
-    partial class VentanaAdmin
+    partial class HomeAdministrador
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.Btn_usuario.Name = "Btn_usuario";
             this.Btn_usuario.Size = new System.Drawing.Size(75, 23);
             this.Btn_usuario.TabIndex = 1;
-            this.Btn_usuario.Text = "Usuario";
+            this.Btn_usuario.Text = "Alumno";
             this.Btn_usuario.UseVisualStyleBackColor = true;
             this.Btn_usuario.Click += new System.EventHandler(this.Btn_usuario_Click);
             // 
@@ -81,7 +81,7 @@
             this.Btn_reglamento.Text = "Reglamento";
             this.Btn_reglamento.UseVisualStyleBackColor = true;
             // 
-            // VentanaAdmin
+            // HomeAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,8 +91,8 @@
             this.Controls.Add(this.Btn_docente);
             this.Controls.Add(this.Btn_usuario);
             this.Controls.Add(this.label1);
-            this.Name = "VentanaAdmin";
-            this.Text = "VentanaAdmin";
+            this.Name = "HomeAdministrador";
+            this.Text = "Home Administrador";
             this.Load += new System.EventHandler(this.VentanaAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
