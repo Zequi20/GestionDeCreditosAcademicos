@@ -28,5 +28,10 @@ namespace Login1New
         {
 
         }
+
+        private void insertarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
