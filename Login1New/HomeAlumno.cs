@@ -16,5 +16,10 @@ namespace Login1New
         {
             InitializeComponent();
         }
+
+        private void HomeAlumno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Login1New
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -33,21 +33,20 @@ namespace Login1New
                 {                    
                     if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==0)
                     {
-                        HomeAdministrador VenAd = new HomeAdministrador();
-                        this.Hide();
+                        HomeAdmin VenAd = new HomeAdmin();
+                        Hide();
                         VenAd.Show();
-
                     }
                     else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==1)
                     {
                         HomeDocente VenDoc = new HomeDocente();
-                        this.Hide();
+                        this.Close();
                         VenDoc.Show();
                     }
                     else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==2)
                     {
                         HomeAlumno VenUsu = new HomeAlumno();
-                        this.Hide();
+                        this.Close();
                         VenUsu.Show();
                     }
                     else
@@ -68,6 +67,11 @@ namespace Login1New
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

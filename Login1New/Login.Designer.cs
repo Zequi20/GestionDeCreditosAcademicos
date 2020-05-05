@@ -1,6 +1,6 @@
 ﻿namespace Login1New
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -35,6 +35,7 @@
             this.txtBoxUsu = new System.Windows.Forms.TextBox();
             this.txtBoxPass = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(53, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 24);
@@ -72,6 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(53, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 24);
@@ -103,12 +106,25 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.linkLabel1.Location = new System.Drawing.Point(99, 210);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(94, 13);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Registrate en CAE";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(484, 311);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBoxPass);
             this.Controls.Add(this.txtBoxUsu);
@@ -116,8 +132,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -134,6 +150,7 @@
         private System.Windows.Forms.TextBox txtBoxUsu;
         private System.Windows.Forms.TextBox txtBoxPass;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

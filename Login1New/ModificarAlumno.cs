@@ -12,7 +12,6 @@ namespace Login1New
 {
     public partial class ModificarAlumno : Form
     {
-        string nom;
         public ModificarAlumno()
         {
             InitializeComponent();
@@ -20,7 +19,11 @@ namespace Login1New
 
         private void ModificarAlumno_Load(object sender, EventArgs e)
         {
-            label2.Text = nom;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

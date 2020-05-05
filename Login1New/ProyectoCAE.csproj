@@ -51,11 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BDusuarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListaAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ListaAlumnos.Designer.cs">
+      <DependentUpon>ListaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarAlumno.cs">
       <SubType>Form</SubType>
@@ -66,17 +77,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades.cs" />
-    <Compile Include="HomeAdministrador.cs">
+    <Compile Include="HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeAdministrador.Designer.cs">
-      <DependentUpon>HomeAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno.Designer.cs">
-      <DependentUpon>Alumno.cs</DependentUpon>
+    <Compile Include="HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeDocente.cs">
       <SubType>Form</SubType>
@@ -90,8 +95,11 @@
     <Compile Include="HomeAlumno.Designer.cs">
       <DependentUpon>HomeAlumno.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ListaAlumnos.resx">
+      <DependentUpon>ListaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarAlumno.resx">
       <DependentUpon>ModificarAlumno.cs</DependentUpon>
@@ -106,11 +114,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="HomeAdministrador.resx">
-      <DependentUpon>HomeAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alumno.resx">
-      <DependentUpon>Alumno.cs</DependentUpon>
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeDocente.resx">
       <DependentUpon>HomeDocente.cs</DependentUpon>
@@ -118,6 +123,20 @@
     <EmbeddedResource Include="HomeAlumno.resx">
       <DependentUpon>HomeAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Utilidades.resx">
+      <DependentUpon>Utilidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BDusuarioDataSet.xsc">
+      <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDusuarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDusuarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDusuarioDataSet.xss">
+      <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,6 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG-20190318-WA0042.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
