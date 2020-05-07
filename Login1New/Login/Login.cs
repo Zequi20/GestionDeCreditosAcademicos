@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Login1New
 {
@@ -16,6 +15,16 @@ namespace Login1New
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,21 +38,21 @@ namespace Login1New
                 string usuario = ds.Tables[0].Rows[0]["usuario"].ToString().Trim();
                 string contraseña = ds.Tables[0].Rows[0]["contraseña"].ToString().Trim();
 
-                if (usuario==txtBoxUsu.Text.Trim() && contraseña==txtBoxPass.Text.Trim())
-                {                    
-                    if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==0)
+                if (usuario == txtBoxUsu.Text.Trim() && contraseña == txtBoxPass.Text.Trim())
+                {
+                    if (Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"]) == 0)
                     {
                         HomeAdmin VenAd = new HomeAdmin();
                         Hide();
                         VenAd.Show();
                     }
-                    else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==1)
+                    else if (Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"]) == 1)
                     {
                         HomeDocente VenDoc = new HomeDocente();
                         this.Close();
                         VenDoc.Show();
                     }
-                    else if(Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"])==2)
+                    else if (Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"]) == 2)
                     {
                         HomeAlumno VenUsu = new HomeAlumno();
                         this.Close();
@@ -55,25 +64,10 @@ namespace Login1New
                     }
                 }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show("Se ha producido un error." + error.Message);
             }
-        }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
     }
 }

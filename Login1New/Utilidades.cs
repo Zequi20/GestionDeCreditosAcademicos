@@ -21,7 +21,7 @@ namespace Login1New
 
             DataSet DS = new DataSet(); // Una variable dataset para ir cargando los resultados del comando
             SqlDataAdapter DP = new SqlDataAdapter(cmd, Con); // adapta el comando con la base de datos
-             
+            
             DP.Fill(DS); // 
 
             Con.Close(); // cierra la base de datos
