@@ -34,6 +34,8 @@
             this.txtBoxPass = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +69,7 @@
             // 
             this.txtBoxPass.Location = new System.Drawing.Point(28, 138);
             this.txtBoxPass.Name = "txtBoxPass";
+            this.txtBoxPass.PasswordChar = '*';
             this.txtBoxPass.Size = new System.Drawing.Size(200, 20);
             this.txtBoxPass.TabIndex = 3;
             // 
@@ -90,12 +93,23 @@
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Login1New.Properties.Resources.IMG_20190318_WA0042;
+            this.pictureBox1.Location = new System.Drawing.Point(269, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(163, 159);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(454, 261);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBoxPass);
@@ -105,6 +119,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +133,6 @@
         private System.Windows.Forms.TextBox txtBoxPass;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -82,6 +82,7 @@
             this.modificarAlumnoToolStripMenuItem.Name = "modificarAlumnoToolStripMenuItem";
             this.modificarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarAlumnoToolStripMenuItem.Text = "Modificar Alumno";
+            this.modificarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.modificarAlumnoToolStripMenuItem_Click);
             // 
             // eliminarAlumnoToolStripMenuItem
             // 
