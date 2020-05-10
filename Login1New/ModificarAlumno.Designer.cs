@@ -43,6 +43,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BtnAceptarCamb = new System.Windows.Forms.Button();
+            this.BtnCancelarCamb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -147,16 +149,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 74);
+            this.textBox1.Location = new System.Drawing.Point(226, 74);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 11;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 203);
+            this.textBox2.Location = new System.Drawing.Point(226, 203);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 12;
             // 
             // comboBox1
@@ -185,11 +187,33 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 14;
             // 
+            // BtnAceptarCamb
+            // 
+            this.BtnAceptarCamb.Location = new System.Drawing.Point(272, 416);
+            this.BtnAceptarCamb.Name = "BtnAceptarCamb";
+            this.BtnAceptarCamb.Size = new System.Drawing.Size(75, 23);
+            this.BtnAceptarCamb.TabIndex = 15;
+            this.BtnAceptarCamb.Text = "Aceptar ";
+            this.BtnAceptarCamb.UseVisualStyleBackColor = true;
+            this.BtnAceptarCamb.Click += new System.EventHandler(this.BtnAceptarCamb_Click);
+            // 
+            // BtnCancelarCamb
+            // 
+            this.BtnCancelarCamb.Location = new System.Drawing.Point(33, 416);
+            this.BtnCancelarCamb.Name = "BtnCancelarCamb";
+            this.BtnCancelarCamb.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelarCamb.TabIndex = 16;
+            this.BtnCancelarCamb.Text = "Cancelar";
+            this.BtnCancelarCamb.UseVisualStyleBackColor = true;
+            this.BtnCancelarCamb.Click += new System.EventHandler(this.BtnCancelarCamb_Click);
+            // 
             // ModificarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.BtnCancelarCamb);
+            this.Controls.Add(this.BtnAceptarCamb);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
@@ -229,5 +253,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button BtnAceptarCamb;
+        private System.Windows.Forms.Button BtnCancelarCamb;
     }
 }
