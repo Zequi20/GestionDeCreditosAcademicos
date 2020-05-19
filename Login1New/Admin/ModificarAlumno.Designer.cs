@@ -39,8 +39,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.BtnModAl = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.codigo = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.BtnAceptarCamb = new System.Windows.Forms.Button();
@@ -147,19 +147,19 @@
             this.BtnModAl.UseVisualStyleBackColor = true;
             this.BtnModAl.Click += new System.EventHandler(this.BtnModAl_Click);
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 11;
+            this.name.Location = new System.Drawing.Point(226, 74);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(121, 20);
+            this.name.TabIndex = 11;
             // 
-            // textBox2
+            // codigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(226, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 12;
+            this.codigo.Location = new System.Drawing.Point(226, 203);
+            this.codigo.Name = "codigo";
+            this.codigo.Size = new System.Drawing.Size(121, 20);
+            this.codigo.TabIndex = 12;
             // 
             // comboBox1
             // 
@@ -172,6 +172,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -216,8 +217,8 @@
             this.Controls.Add(this.BtnAceptarCamb);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.codigo);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.BtnModAl);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -249,8 +250,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BtnModAl;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox codigo;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button BtnAceptarCamb;

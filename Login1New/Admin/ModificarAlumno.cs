@@ -25,8 +25,8 @@ namespace Login1New
 
         public void MostrarDatos(string nombre, string carreFa, string cur, string cod, string credi)
         {
-            textBox1.Visible = false;
-            textBox2.Visible = false;
+            name.Visible = false;
+            codigo.Visible = false;
             comboBox1.Visible = false;
             comboBox2.Visible = false;
             label3.Text = nombre;
@@ -44,12 +44,12 @@ namespace Login1New
             label4.Visible = false;
             label6.Visible = false;
             label8.Visible = false;
-            textBox1.Visible = true;
-            textBox2.Visible = true;
+            name.Visible = true;
+            codigo.Visible = true;
             comboBox1.Visible = true;
             comboBox2.Visible = true;
-            textBox1.Text = label3.Text;
-            textBox2.Text = label6.Text;
+            name.Text = label3.Text;
+            codigo.Text = label6.Text;
             comboBox1.Text = label4.Text;
             comboBox2.Text = label8.Text;
             BtnModAl.Visible = false;
@@ -60,29 +60,35 @@ namespace Login1New
         private void BtnAceptarCamb_Click(object sender, EventArgs e)
         {
             string newNom, newCarrera, newCurso, newcod, newCredi;
-            if (textBox1.Text != "" && textBox1.Text.Length >= 5)
+            if (name.Text != "" && name.Text.Length >= 5)
             {
-                newNom = textBox1.Text;
-                textBox1.Visible = false;
+                newNom = name.Text;
+                name.Visible = false;
                 label3.Visible = true;
                 label3.Text = newNom;
                 newCarrera = comboBox1.Text;
                 label4.Text = newCarrera;
                 comboBox1.Visible = false;
                 label4.Visible = true;
-                newcod = textBox2.Text;
+                newcod = codigo.Text;
                 label6.Text = newcod;
                 label6.Visible = true;
-                textBox2.Visible = false;
+                codigo.Visible = false;
                 newCurso = comboBox2.Text;
                 label8.Text = newCurso;
                 label8.Visible = true;
-                comboBox2.Visible = false;             
+                comboBox2.Visible = false;
+                Utilidades.Ejecutar("UPDATE Usuarios SET carrera = '"+comboBox1.Text+"'  WHERE usuario = '"+name.Text.Trim()+"'");
             }
         }
 
         private void BtnCancelarCamb_Click(object sender, EventArgs e)
         {
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

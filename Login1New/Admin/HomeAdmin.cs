@@ -72,7 +72,7 @@ namespace Login1New
                     ModificarAlumno modAl = new ModificarAlumno();
                     MessageBox.Show("Usuario valido");
                     this.Hide();
-                    modAl.MostrarDatos(textBox1.Text, carrera,curso,codigo,creditos);
+                    modAl.MostrarDatos(textBox1.Text, carrera, curso, codigo, creditos);
                     modAl.Show();
                 }
             }
