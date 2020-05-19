@@ -204,7 +204,7 @@
             this.BtnCancelarCamb.Name = "BtnCancelarCamb";
             this.BtnCancelarCamb.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelarCamb.TabIndex = 16;
-            this.BtnCancelarCamb.Text = "Cancelar";
+            this.BtnCancelarCamb.Text = "Atras";
             this.BtnCancelarCamb.UseVisualStyleBackColor = true;
             this.BtnCancelarCamb.Click += new System.EventHandler(this.BtnCancelarCamb_Click);
             // 

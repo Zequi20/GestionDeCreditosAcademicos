@@ -84,6 +84,10 @@ namespace Login1New
 
         private void BtnCancelarCamb_Click(object sender, EventArgs e)
         {
+            HomeAdmin ventana = new HomeAdmin();
+            this.Hide();
+            ventana.Show();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
