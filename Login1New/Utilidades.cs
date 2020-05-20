@@ -17,7 +17,7 @@ namespace Login1New
         public static DataSet Ejecutar(string cmd)
         {
             // mi servidor de base de datos es: LAPTOP-RRPVHD2G\\SQLEXPRESS "Luciano"
-            SqlConnection Con = new SqlConnection("SERVER=ZACK\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
+            SqlConnection Con = new SqlConnection("SERVER=LAPTOP-RRPVHD2G\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
             Con.Open(); //abre la base de datos
 
             DataSet DS = new DataSet(); // Una variable dataset para ir cargando los resultados del comando
@@ -32,7 +32,7 @@ namespace Login1New
 
         public static DataSet Insertar(string cmd)
         {
-            SqlConnection Con = new SqlConnection("SERVER=ZACK\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
+            SqlConnection Con = new SqlConnection("SERVER=LAPTOP-RRPVHD2G\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
             Con.Open(); //abre la base de datos
 
             DataSet DS = new DataSet(); // Una variable dataset para ir cargando los resultados del comando
@@ -47,7 +47,7 @@ namespace Login1New
 
         public static DataSet Eliminar(string cmd)
         {
-            SqlConnection Con = new SqlConnection("SERVER=ZACK\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
+            SqlConnection Con = new SqlConnection("SERVER=LAPTOP-RRPVHD2G\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
             Con.Open(); //abre la base de datos
 
             DataSet DS = new DataSet(); // Una variable dataset para ir cargando los resultados del comando
