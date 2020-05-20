@@ -16,12 +16,12 @@ namespace Login1New
         public Reglamento()
         {
             InitializeComponent();
-            textBox1.Visible = false;
             button3.Visible = false;
             StreamReader leer = new StreamReader(@"C:\Users\lucia\OneDrive\Desktop\Archivo.txt");
             try
             {
-                label2.Text = leer.ReadLine();
+                textBox1.Text = leer.ReadLine();
+                textBox1.ReadOnly = true;
             }
             catch
             {
@@ -32,17 +32,13 @@ namespace Login1New
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Visible = true;
-            textBox1.Text = label2.Text;
-            label2.Visible = false;
+            textBox1.ReadOnly = false;
             button1.Visible = false;
             button3.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label2.Visible = true;
-            textBox1.Visible = false;
             button3.Visible = false;
             button1.Visible = true;
             StreamWriter escribir = new StreamWriter(@"C:\Users\lucia\OneDrive\Desktop\Archivo.txt",false);
@@ -58,7 +54,8 @@ namespace Login1New
             StreamReader leer = new StreamReader(@"C:\Users\lucia\OneDrive\Desktop\Archivo.txt");
             try
             {
-                label2.Text = leer.ReadLine();
+                textBox1.Text = leer.ReadLine();
+                textBox1.ReadOnly = true;
             }
             catch
             {
