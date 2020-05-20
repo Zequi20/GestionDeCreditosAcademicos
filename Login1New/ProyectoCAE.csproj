@@ -51,22 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\ListaAlumnos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\ListaAlumnos.Designer.cs">
-      <DependentUpon>ListaAlumnos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BDusuarioDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Admin\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\HomeAdmin.Designer.cs">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListaAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ListaAlumnos.Designer.cs">
+      <DependentUpon>ListaAlumnos.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumno\HomeAlumno.cs">
       <SubType>Form</SubType>
@@ -74,10 +69,20 @@
     <Compile Include="Alumno\HomeAlumno.Designer.cs">
       <DependentUpon>HomeAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="BDusuarioDataSet1.Designer.cs">
+    <Compile Include="BDusuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDusuarioDataSet1.xsd</DependentUpon>
+      <DependentUpon>BDusuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDusuarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDusuarioDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDusuarioDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
@@ -131,6 +136,17 @@
     <EmbeddedResource Include="Utilidades.resx">
       <DependentUpon>Utilidades.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BDusuario.xsc">
+      <DependentUpon>BDusuario.xsd</DependentUpon>
+    </None>
+    <None Include="BDusuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDusuario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDusuario.xss">
+      <DependentUpon>BDusuario.xsd</DependentUpon>
+    </None>
     <None Include="BDusuarioDataSet.xsc">
       <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
     </None>
@@ -142,16 +158,16 @@
     <None Include="BDusuarioDataSet.xss">
       <DependentUpon>BDusuarioDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BDusuarioDataSet1.xsc">
-      <DependentUpon>BDusuarioDataSet1.xsd</DependentUpon>
+    <None Include="BDusuarioDataSet2.xsc">
+      <DependentUpon>BDusuarioDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="BDusuarioDataSet1.xsd">
+    <None Include="BDusuarioDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDusuarioDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDusuarioDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDusuarioDataSet1.xss">
-      <DependentUpon>BDusuarioDataSet1.xsd</DependentUpon>
+    <None Include="BDusuarioDataSet2.xss">
+      <DependentUpon>BDusuarioDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

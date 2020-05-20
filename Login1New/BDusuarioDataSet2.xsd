@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="BDusuarioDataSet" targetNamespace="http://tempuri.org/BDusuarioDataSet.xsd" xmlns:mstns="http://tempuri.org/BDusuarioDataSet.xsd" xmlns="http://tempuri.org/BDusuarioDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="BDusuarioDataSet2" targetNamespace="http://tempuri.org/BDusuarioDataSet2.xsd" xmlns:mstns="http://tempuri.org/BDusuarioDataSet2.xsd" xmlns="http://tempuri.org/BDusuarioDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -103,7 +103,7 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BDusuarioDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BDusuarioDataSet" msprop:Generator_UserDSName="BDusuarioDataSet">
+  <xs:element name="BDusuarioDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BDusuarioDataSet2" msprop:Generator_UserDSName="BDusuarioDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">

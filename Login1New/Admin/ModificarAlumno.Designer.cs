@@ -45,6 +45,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.BtnAceptarCamb = new System.Windows.Forms.Button();
             this.BtnCancelarCamb = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -153,6 +154,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(121, 20);
             this.name.TabIndex = 11;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // codigo
             // 
@@ -208,11 +210,22 @@
             this.BtnCancelarCamb.UseVisualStyleBackColor = true;
             this.BtnCancelarCamb.Click += new System.EventHandler(this.BtnCancelarCamb_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(63, 369);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "label11";
+            this.label11.Visible = false;
+            // 
             // ModificarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.BtnCancelarCamb);
             this.Controls.Add(this.BtnAceptarCamb);
             this.Controls.Add(this.comboBox2);
@@ -232,6 +245,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ModificarAlumno";
             this.Text = "ModificarAlumno";
+            this.Load += new System.EventHandler(this.ModificarAlumno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +270,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button BtnAceptarCamb;
         private System.Windows.Forms.Button BtnCancelarCamb;
+        private System.Windows.Forms.Label label11;
     }
 }

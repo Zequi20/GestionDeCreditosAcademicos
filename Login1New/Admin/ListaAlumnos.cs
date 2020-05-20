@@ -19,27 +19,8 @@ namespace Login1New.Admin
 
         private void ListaAlumnos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bDusuarioDataSet1.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter1.Fill(this.bDusuarioDataSet1.Usuarios);
-            // TODO: esta línea de código carga datos en la tabla 'bDusuarioDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.bDusuarioDataSet.Usuarios);
-            // TODO: esta línea de código carga datos en la tabla 'bDusuarioDataSet1.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter1.Fill(this.bDusuarioDataSet1.Usuarios);
-            // TODO: esta línea de código carga datos en la tabla 'bDusuarioDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.bDusuarioDataSet.Usuarios);
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.usuariosTableAdapter1.FillBy(this.bDusuarioDataSet1.Usuarios);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            // TODO: esta línea de código carga datos en la tabla 'bDusuarioDataSet2.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.bDusuarioDataSet2.Usuarios);
 
         }
     }

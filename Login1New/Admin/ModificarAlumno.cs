@@ -12,6 +12,7 @@ namespace Login1New
 {
     public partial class ModificarAlumno : Form
     {
+        string idusu;
         string nombre;
         string carreFa;
         string cod;
@@ -20,10 +21,10 @@ namespace Login1New
         public ModificarAlumno()
         {
             InitializeComponent();
-            MostrarDatos(nombre, carreFa, cod, cur, credi);
+            MostrarDatos(nombre, carreFa, cod, cur, credi, idusu);
         }
 
-        public void MostrarDatos(string nombre, string carreFa, string cur, string cod, string credi)
+        public void MostrarDatos(string nombre, string carreFa, string cur, string cod, string credi, string idusu)
         {
             name.Visible = false;
             codigo.Visible = false;
@@ -36,6 +37,8 @@ namespace Login1New
             label10.Text = credi;
             BtnAceptarCamb.Visible = false;
             BtnCancelarCamb.Visible = false;
+            label11.Text = idusu;
+            label10.Text = credi;
         }
 
         private void BtnModAl_Click(object sender, EventArgs e)
@@ -78,7 +81,10 @@ namespace Login1New
                 label8.Text = newCurso;
                 label8.Visible = true;
                 comboBox2.Visible = false;
-                Utilidades.Ejecutar("UPDATE Usuarios SET carrera = '"+comboBox1.Text+"'  WHERE usuario = '"+name.Text.Trim()+"'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET carrera = '" + comboBox1.Text + "'  WHERE id_usuario = '" + label11.Text + "'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET usuario = '" + name.Text + "'  WHERE id_usuario = '" + label11.Text.Trim() + "'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET curso = '" + comboBox2.Text + "'  WHERE id_usuario = '" + label11.Text.Trim() + "'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET codigo = '" + codigo.Text + "'  WHERE id_usuario = '" + label11.Text.Trim() + "'");
             }
         }
 
@@ -91,6 +97,16 @@ namespace Login1New
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModificarAlumno_Load(object sender, EventArgs e)
         {
 
         }

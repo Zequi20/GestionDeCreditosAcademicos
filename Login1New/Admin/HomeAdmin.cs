@@ -1,4 +1,5 @@
-﻿using Login1New.Admin;
+﻿
+using Login1New.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Login1New
     public partial class HomeAdmin : Form
     {
         public int option = 0;
+        public string id="error";
         public HomeAdmin()
         {
             InitializeComponent();
@@ -53,7 +55,8 @@ namespace Login1New
                 string curso = ds.Tables[0].Rows[0]["curso"].ToString().Trim();
                 string codigo = ds.Tables[0].Rows[0]["codigo"].ToString().Trim();
                 string creditos = ds.Tables[0].Rows[0]["creditos_acade"].ToString().Trim();
-
+                id = ds.Tables[0].Rows[0]["id_usuario"].ToString().Trim();
+                MessageBox.Show("" + id);
                 if (option == 1 && usuario == textBox1.Text.Trim())
                 {
                     Utilidades.Ejecutar("INSERT INTO Usuarios (usuario, contraseña, check_usu) VALUES('" + textBox1.Text.Trim() + "', '" + textBox2.Text + "',2);");
@@ -72,7 +75,7 @@ namespace Login1New
                     ModificarAlumno modAl = new ModificarAlumno();
                     MessageBox.Show("Usuario valido");
                     this.Hide();
-                    modAl.MostrarDatos(textBox1.Text, carrera, curso, codigo, creditos);
+                    modAl.MostrarDatos(textBox1.Text, carrera, curso, codigo, creditos, id);
                     modAl.Show();
                 }
             }
@@ -122,6 +125,11 @@ namespace Login1New
             textBox2.Visible = false;
             BtnAceptar.Visible = true;
             BtnCancelar.Visible = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -73,28 +73,28 @@
             // agregarAlumnoToolStripMenuItem
             // 
             this.agregarAlumnoToolStripMenuItem.Name = "agregarAlumnoToolStripMenuItem";
-            this.agregarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.agregarAlumnoToolStripMenuItem.Text = "Agregar Alumno";
             this.agregarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.agregarAlumnoToolStripMenuItem_Click);
             // 
             // modificarAlumnoToolStripMenuItem
             // 
             this.modificarAlumnoToolStripMenuItem.Name = "modificarAlumnoToolStripMenuItem";
-            this.modificarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.modificarAlumnoToolStripMenuItem.Text = "Modificar Alumno";
             this.modificarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.modificarAlumnoToolStripMenuItem_Click);
             // 
             // eliminarAlumnoToolStripMenuItem
             // 
             this.eliminarAlumnoToolStripMenuItem.Name = "eliminarAlumnoToolStripMenuItem";
-            this.eliminarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.eliminarAlumnoToolStripMenuItem.Text = "Eliminar Alumno";
             this.eliminarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.eliminarAlumnoToolStripMenuItem_Click);
             // 
             // listaDeAlumnosToolStripMenuItem
             // 
             this.listaDeAlumnosToolStripMenuItem.Name = "listaDeAlumnosToolStripMenuItem";
-            this.listaDeAlumnosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDeAlumnosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.listaDeAlumnosToolStripMenuItem.Text = "Lista de Alumnos";
             this.listaDeAlumnosToolStripMenuItem.Click += new System.EventHandler(this.listaDeAlumnosToolStripMenuItem_Click);
             // 
@@ -147,6 +147,7 @@
             this.textBox1.Size = new System.Drawing.Size(270, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 

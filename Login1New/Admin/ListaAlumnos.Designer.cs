@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bDusuarioDataSet = new Login1New.BDusuarioDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bDusuarioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new Login1New.BDusuarioDataSetTableAdapters.UsuariosTableAdapter();
             this.bDusuarioDataSet1 = new Login1New.BDusuarioDataSet1();
             this.bDusuarioDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter1 = new Login1New.BDusuarioDataSet1TableAdapters.UsuariosTableAdapter();
+            this.bDusuarioDataSet2 = new Login1New.BDusuarioDataSet2();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new Login1New.BDusuarioDataSet2TableAdapters.UsuariosTableAdapter();
             this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,19 +43,12 @@
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creditosacadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bDusuarioDataSet
-            // 
-            this.bDusuarioDataSet.DataSetName = "BDusuarioDataSet";
-            this.bDusuarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView1
             // 
@@ -73,25 +63,11 @@
             this.codigoDataGridViewTextBoxColumn,
             this.creditosacadeDataGridViewTextBoxColumn,
             this.cursoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.usuariosBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 30);
+            this.dataGridView1.DataSource = this.usuariosBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 26);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(840, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(779, 332);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // bDusuarioDataSetBindingSource
-            // 
-            this.bDusuarioDataSetBindingSource.DataSource = this.bDusuarioDataSet;
-            this.bDusuarioDataSetBindingSource.Position = 0;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.bDusuarioDataSetBindingSource;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // bDusuarioDataSet1
             // 
@@ -103,14 +79,19 @@
             this.bDusuarioDataSet1BindingSource.DataSource = this.bDusuarioDataSet1;
             this.bDusuarioDataSet1BindingSource.Position = 0;
             // 
-            // usuariosBindingSource1
+            // bDusuarioDataSet2
             // 
-            this.usuariosBindingSource1.DataMember = "Usuarios";
-            this.usuariosBindingSource1.DataSource = this.bDusuarioDataSet1BindingSource;
+            this.bDusuarioDataSet2.DataSetName = "BDusuarioDataSet2";
+            this.bDusuarioDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuariosTableAdapter1
+            // usuariosBindingSource
             // 
-            this.usuariosTableAdapter1.ClearBeforeFill = true;
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.bDusuarioDataSet2;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // idusuarioDataGridViewTextBoxColumn
             // 
@@ -165,36 +146,32 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.BackgroundImage = global::Login1New.Properties.Resources.Background1;
-            this.ClientSize = new System.Drawing.Size(844, 411);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 361);
             this.Controls.Add(this.dataGridView1);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ListaAlumnos";
             this.Text = "ListaAlumnos";
             this.Load += new System.EventHandler(this.ListaAlumnos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDusuarioDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private BDusuarioDataSet bDusuarioDataSet;
+
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource bDusuarioDataSetBindingSource;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private BDusuarioDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private System.Windows.Forms.BindingSource bDusuarioDataSet1BindingSource;
         private BDusuarioDataSet1 bDusuarioDataSet1;
-        private System.Windows.Forms.BindingSource usuariosBindingSource1;
-        private BDusuarioDataSet1TableAdapters.UsuariosTableAdapter usuariosTableAdapter1;
+        private BDusuarioDataSet2 bDusuarioDataSet2;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private BDusuarioDataSet2TableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contraseñaDataGridViewTextBoxColumn;
