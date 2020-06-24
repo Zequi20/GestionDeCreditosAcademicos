@@ -30,6 +30,15 @@ namespace Login1New
             return DS; //retorna un dataset con los pedidos
         }
 
+        public static SqlDataReader Consulta(string consulta)
+        {
+            SqlConnection Con = new SqlConnection("SERVER=ZACK\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql
+            Con.Open();
+            SqlCommand comando = new SqlCommand(consulta, Con);
+            SqlDataReader registro = comando.ExecuteReader();
+            return registro;
+        }
+
         public static DataSet Insertar(string cmd)
         {
             SqlConnection Con = new SqlConnection("SERVER=ZACK\\SQLEXPRESS;DATABASE=BDusuario;Integrated security=True"); // asigna a una variable una cadena de conexion para sql

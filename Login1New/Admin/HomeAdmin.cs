@@ -16,6 +16,7 @@ namespace Login1New
     {
         public int option = 0;
         public string id="error";
+        ReglamentoCAE v = new ReglamentoCAE();
         public HomeAdmin()
         {
             InitializeComponent();
@@ -130,6 +131,11 @@ namespace Login1New
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void verReglamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            v.Show();
         }
     }
 }

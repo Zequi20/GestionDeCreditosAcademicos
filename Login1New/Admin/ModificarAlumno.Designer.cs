@@ -46,6 +46,16 @@
             this.BtnAceptarCamb = new System.Windows.Forms.Button();
             this.BtnCancelarCamb = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.agregarHoras = new System.Windows.Forms.ToolStripMenuItem();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.Aceptar = new System.Windows.Forms.Button();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.txtAyudantia = new System.Windows.Forms.TextBox();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -178,6 +188,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Primero",
@@ -220,18 +231,121 @@
             this.label11.Text = "label11";
             this.label11.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarHoras});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.Size = new System.Drawing.Size(384, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // agregarHoras
+            // 
+            this.agregarHoras.Name = "agregarHoras";
+            this.agregarHoras.Size = new System.Drawing.Size(95, 20);
+            this.agregarHoras.Text = "Agregar Horas";
+            this.agregarHoras.Visible = false;
+            this.agregarHoras.Click += new System.EventHandler(this.agregarHorasToolStripMenuItem_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(158, 133);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(72, 17);
+            this.radioButton1.TabIndex = 19;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Ayudantia";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Visible = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(158, 156);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(66, 17);
+            this.radioButton2.TabIndex = 20;
+            this.radioButton2.Text = "Pasantia";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Visible = false;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(158, 179);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(105, 17);
+            this.radioButton3.TabIndex = 21;
+            this.radioButton3.Text = "Charla(UCA-CyT)";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.Visible = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(158, 202);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(119, 17);
+            this.radioButton4.TabIndex = 22;
+            this.radioButton4.Text = "Charla(UCA-NoCyT)";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.Visible = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            // 
+            // Aceptar
+            // 
+            this.Aceptar.Location = new System.Drawing.Point(267, 416);
+            this.Aceptar.Name = "Aceptar";
+            this.Aceptar.Size = new System.Drawing.Size(81, 23);
+            this.Aceptar.TabIndex = 23;
+            this.Aceptar.Text = "Aceptar ";
+            this.Aceptar.UseVisualStyleBackColor = true;
+            this.Aceptar.Visible = false;
+            this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(158, 222);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(152, 17);
+            this.radioButton5.TabIndex = 24;
+            this.radioButton5.Text = "Charlas(Otras instituciones)";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.Visible = false;
+            // 
+            // txtAyudantia
+            // 
+            this.txtAyudantia.Location = new System.Drawing.Point(247, 253);
+            this.txtAyudantia.Name = "txtAyudantia";
+            this.txtAyudantia.Size = new System.Drawing.Size(100, 20);
+            this.txtAyudantia.TabIndex = 25;
+            this.txtAyudantia.Visible = false;
+            // 
             // ModificarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.txtAyudantia);
+            this.Controls.Add(this.radioButton5);
+            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.BtnCancelarCamb);
-            this.Controls.Add(this.BtnAceptarCamb);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.codigo);
-            this.Controls.Add(this.name);
             this.Controls.Add(this.BtnModAl);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -243,9 +357,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.Aceptar);
+            this.Controls.Add(this.BtnAceptarCamb);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ModificarAlumno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarAlumno";
             this.Load += new System.EventHandler(this.ModificarAlumno_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +393,14 @@
         private System.Windows.Forms.Button BtnAceptarCamb;
         private System.Windows.Forms.Button BtnCancelarCamb;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem agregarHoras;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Button Aceptar;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.TextBox txtAyudantia;
     }
 }

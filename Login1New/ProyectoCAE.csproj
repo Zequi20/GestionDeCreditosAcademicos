@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Credito.cs" />
     <Compile Include="Admin\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="Admin\ListaAlumnos.Designer.cs">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ReglamentoCAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ReglamentoCAE.Designer.cs">
+      <DependentUpon>ReglamentoCAE.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumno\HomeAlumno.cs">
       <SubType>Form</SubType>
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ListaAlumnos.resx">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ReglamentoCAE.resx">
+      <DependentUpon>ReglamentoCAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\HomeAlumno.resx">
       <DependentUpon>HomeAlumno.cs</DependentUpon>
