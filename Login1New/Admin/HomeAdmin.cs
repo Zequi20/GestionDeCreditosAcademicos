@@ -24,7 +24,9 @@ namespace Login1New
 
         private void reglasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Reglamento reglas = new Reglamento();
+            this.Hide();
+            reglas.Show();
         }
 
         private void HomeAdmin_Load(object sender, EventArgs e)
