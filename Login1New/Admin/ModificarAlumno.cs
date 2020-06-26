@@ -15,22 +15,23 @@ namespace Login1New
 {
     public partial class ModificarAlumno : Form
     {
-        string idusu;
+        /*string idusu;
         string nombre;
         string carreFa;
         string cod;
         string cur;
-        string credi;
+        string credi;*/
         int cons=0;
         bool check = true;
         Credito cae = new Credito();
+        EmpresaAlumno empresa = new EmpresaAlumno();
         public ModificarAlumno()
         {
             InitializeComponent();
-            MostrarDatos(nombre, carreFa, cod, cur, credi, idusu);
+            //MostrarDatos(nombre, carreFa, cod, cur, credi, idusu);
         }
 
-        public void MostrarDatos(string nombre, string carreFa, string cur, string cod, string credi, string idusu)
+        /*public void MostrarDatos(string nombre, string carreFa, string cur, string cod, string credi, string idusu)
         {
             name.Visible = false;
             codigo.Visible = false;
@@ -45,10 +46,12 @@ namespace Login1New
             BtnCancelarCamb.Visible = false;
             label11.Text = idusu;
             label10.Text = credi;
-        }
+        }*/
 
         private void BtnModAl_Click(object sender, EventArgs e)
         {
+            Aceptar.Visible = false;
+            button1.Visible = true;
             label3.Visible = false;
             label4.Visible = false;
             label6.Visible = false;
@@ -66,6 +69,7 @@ namespace Login1New
             BtnAceptarCamb.Visible = true;
             agregarHoras.Visible = true;
             menuStrip1.Visible = true;
+            verEmpresasToolStrip.Visible = true;
         }
 
         private void BtnAceptarCamb_Click(object sender, EventArgs e)
@@ -100,17 +104,18 @@ namespace Login1New
                 label8.Text = newCurso;
                 label8.Visible = true;
                 comboBox2.Visible = false;
-                Utilidades.Ejecutar("UPDATE Usuarios SET carrera = '" + comboBox1.Text + "'  WHERE id_usuario = '" + label11.Text + "'");
-                Utilidades.Ejecutar("UPDATE Usuarios SET usuario = '" + name.Text + "'  WHERE id_usuario = '" + label11.Text.Trim() + "'");
-                Utilidades.Ejecutar("UPDATE Usuarios SET curso = '" + comboBox2.Text + "'  WHERE id_usuario = '" + label11.Text.Trim() + "'");
-                Utilidades.Ejecutar("UPDATE Usuarios SET codigo = '" + codigo.Text + "'  WHERE id_usuario = '" + label11.Text.Trim() + "'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET carrera = '" + comboBox1.Text + "'  WHERE usuario = '" + label11.Text + "'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET usuario = '" + name.Text + "'  WHERE usuario = '" + label11.Text.Trim() + "'");
+                label11.Text = name.Text;
+                Utilidades.Ejecutar("UPDATE Usuarios SET curso = '" + comboBox2.Text + "'  WHERE usuario = '" + label11.Text.Trim() + "'");
+                Utilidades.Ejecutar("UPDATE Usuarios SET codigo = '" + codigo.Text + "'  WHERE usuario = '" + label11.Text.Trim() + "'");
             }
         }
 
         private void BtnCancelarCamb_Click(object sender, EventArgs e)
         {
             HomeAdmin ventana = new HomeAdmin();
-            this.Hide();
+            this.Dispose();
             ventana.Show();
 
         }
@@ -127,7 +132,22 @@ namespace Login1New
 
         private void ModificarAlumno_Load(object sender, EventArgs e)
         {
-
+            SqlDataReader reader = Utilidades.Consulta("SELECT usuario,carrera,codigo,curso,creditos_acade FROM Usuarios WHERE usuario ='"+label11.Text.Trim()+"'");
+            if(reader.Read())
+            {
+                label3.Text = reader["usuario"].ToString();
+                label4.Text = reader["carrera"].ToString();
+                label6.Text = reader["codigo"].ToString();
+                label8.Text = reader["curso"].ToString();
+                label10.Text = reader["creditos_acade"].ToString();
+            }
+            empresa.labelNombre.Text = label3.Text;
+            DataTable Nombres=Utilidades.ObtenerEmpresa("SELECT nombre FROM Empresas WHERE check_baja='1'");
+            for(int i=0;i<Nombres.Rows.Count;i++)
+            {
+                comboBoxPas.Items.Add(Nombres.Rows[i]["nombre"]);
+                comboBoxPas.SelectedIndex = 0;
+            }
         }
 
         private void agregarHorasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,7 +192,17 @@ namespace Login1New
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (comboBoxPas.Visible == false)
+            {
+                comboBoxPas.Visible = true;
+                label7.Text = "Empresa";
+                label7.Visible = true;
+            }
+            else
+            {
+                comboBoxPas.Visible = false;
+                label7.Visible = false;
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -195,6 +225,7 @@ namespace Login1New
 
         private void Aceptar_Click(object sender, EventArgs e)
         {
+            verEmpresasToolStrip.Visible = false;
             int horas = 0, semanas = 0, creditos = 0, creditosNew=0;
             int residuo=0, residuoNew=0;
             try
@@ -239,7 +270,8 @@ namespace Login1New
                     }
                     Utilidades.Consulta("UPDATE Usuarios SET creditos_acade = '"+creditosNew+ "'  WHERE usuario = '" + label3.Text + "'");
                     Utilidades.Consulta("UPDATE Usuarios SET res_ayudantia = '"+residuoNew+"'  WHERE usuario = '" + label3.Text + "'");
-                    MessageBox.Show("Creditos acumulados: " + creditosNew + "\nResiduo a favor: " + residuoNew, "Info"); 
+                    MessageBox.Show("Creditos acumulados: " + creditosNew + "\nResiduo a favor: " + residuoNew, "Info");
+                    name.Text = "";
                 }
                 else
                 {
@@ -269,7 +301,13 @@ namespace Login1New
                     }
                     Utilidades.Consulta("UPDATE Usuarios SET creditos_acade = '" + creditosNew + "'  WHERE usuario = '" + label3.Text + "'");
                     Utilidades.Consulta("UPDATE Usuarios SET res_pasantia = '" + residuoNew + "'  WHERE usuario = '" + label3.Text + "'");
-                    
+                    SqlDataReader cod = Utilidades.Consulta("SELECT cod_empresa FROM Empresas WHERE nombre='" + comboBoxPas.Text.Trim() + "'");
+                    if (cod.Read())
+                    {
+                        Utilidades.Consulta("INSERT INTO Pasantia(cod_alumno, nombre, horas, cod_empresa) VALUES('" + label6.Text + "','" + label3.Text + "','" + name.Text + "','"+cod["cod_empresa"].ToString()+"')");
+                    }
+                    MessageBox.Show("Operacion Exitosa","Aviso");
+                    name.Text = "";
                 }
                 else
                 {
@@ -300,6 +338,8 @@ namespace Login1New
                     Utilidades.Consulta("UPDATE Usuarios SET creditos_acade = '" + creditosNew + "'  WHERE usuario = '" + label3.Text + "'");
                     Utilidades.Consulta("UPDATE Usuarios SET res_charlaCyT = '" + residuoNew + "'  WHERE usuario = '" + label3.Text + "'");
                     MessageBox.Show("Creditos acumulados: " + creditosNew + "\nResiduo a favor: " + residuoNew, "Info");
+                    MessageBox.Show("Operacion Exitosa", "Aviso");
+                    name.Text = "";
                 }
 
             }
@@ -327,6 +367,8 @@ namespace Login1New
                     Utilidades.Consulta("UPDATE Usuarios SET creditos_acade = '" + creditosNew + "'  WHERE usuario = '" + label3.Text + "'");
                     Utilidades.Consulta("UPDATE Usuarios SET res_charlaNoCyT = '" + residuoNew + "'  WHERE usuario = '" + label3.Text + "'");
                     MessageBox.Show("Creditos acumulados: " + creditosNew + "\nResiduo a favor: " + residuoNew, "Info");
+                    MessageBox.Show("Operacion Exitosa", "Aviso");
+                    name.Text = "";
                 }
             }
             else if (radioButton5.Checked == true)
@@ -353,9 +395,44 @@ namespace Login1New
                     Utilidades.Consulta("UPDATE Usuarios SET creditos_acade = '" + creditosNew + "'  WHERE usuario = '" + label3.Text + "'");
                     Utilidades.Consulta("UPDATE Usuarios SET res_otros = '" + residuoNew + "'  WHERE usuario = '" + label3.Text + "'");
                     MessageBox.Show("Creditos acumulados: " + creditosNew + "\nResiduo a favor: " + residuoNew, "Info");
+                    MessageBox.Show("Operacion Exitosa", "Aviso");
+                    name.Text = "";
                 }
             }
 
+        }
+
+        private void verEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            empresa.Show();
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            ModificarAlumno inst = new ModificarAlumno();
+            inst.label11.Text = label3.Text;
+            this.Dispose();
+            inst.Show();
+            
+        }
+
+        private void ModificarAlumno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            HomeAdmin ventana = new HomeAdmin();
+            this.Dispose();
+            ventana.Show();
         }
     }
 }

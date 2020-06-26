@@ -46,11 +46,11 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(12, 397);
+            this.btnAtras.Location = new System.Drawing.Point(659, 12);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(120, 40);
             this.btnAtras.TabIndex = 1;
-            this.btnAtras.Text = "Atras";
+            this.btnAtras.Text = "Cerrar";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 

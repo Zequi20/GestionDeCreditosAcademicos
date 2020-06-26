@@ -283,10 +283,6 @@ namespace Login1New {
             
             private global::System.Data.DataColumn columnusuario;
             
-            private global::System.Data.DataColumn columncontraseña;
-            
-            private global::System.Data.DataColumn columncheck_usu;
-            
             private global::System.Data.DataColumn columncarrera;
             
             private global::System.Data.DataColumn columncodigo;
@@ -294,6 +290,16 @@ namespace Login1New {
             private global::System.Data.DataColumn columncreditos_acade;
             
             private global::System.Data.DataColumn columncurso;
+            
+            private global::System.Data.DataColumn columnres_ayudantia;
+            
+            private global::System.Data.DataColumn columnres_pasantia;
+            
+            private global::System.Data.DataColumn columnres_charlaCyT;
+            
+            private global::System.Data.DataColumn columnres_charlaNoCyT;
+            
+            private global::System.Data.DataColumn columnres_otros;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -346,22 +352,6 @@ namespace Login1New {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn contraseñaColumn {
-                get {
-                    return this.columncontraseña;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn check_usuColumn {
-                get {
-                    return this.columncheck_usu;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn carreraColumn {
                 get {
                     return this.columncarrera;
@@ -389,6 +379,46 @@ namespace Login1New {
             public global::System.Data.DataColumn cursoColumn {
                 get {
                     return this.columncurso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn res_ayudantiaColumn {
+                get {
+                    return this.columnres_ayudantia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn res_pasantiaColumn {
+                get {
+                    return this.columnres_pasantia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn res_charlaCyTColumn {
+                get {
+                    return this.columnres_charlaCyT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn res_charlaNoCyTColumn {
+                get {
+                    return this.columnres_charlaNoCyT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn res_otrosColumn {
+                get {
+                    return this.columnres_otros;
                 }
             }
             
@@ -429,17 +459,20 @@ namespace Login1New {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsuariosRow AddUsuariosRow(string usuario, string contraseña, int check_usu, string carrera, int codigo, int creditos_acade, string curso) {
+            public UsuariosRow AddUsuariosRow(string usuario, string carrera, int codigo, int creditos_acade, string curso, int res_ayudantia, int res_pasantia, int res_charlaCyT, int res_charlaNoCyT, int res_otros) {
                 UsuariosRow rowUsuariosRow = ((UsuariosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         usuario,
-                        contraseña,
-                        check_usu,
                         carrera,
                         codigo,
                         creditos_acade,
-                        curso};
+                        curso,
+                        res_ayudantia,
+                        res_pasantia,
+                        res_charlaCyT,
+                        res_charlaNoCyT,
+                        res_otros};
                 rowUsuariosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUsuariosRow);
                 return rowUsuariosRow;
@@ -471,12 +504,15 @@ namespace Login1New {
             internal void InitVars() {
                 this.columnid_usuario = base.Columns["id_usuario"];
                 this.columnusuario = base.Columns["usuario"];
-                this.columncontraseña = base.Columns["contraseña"];
-                this.columncheck_usu = base.Columns["check_usu"];
                 this.columncarrera = base.Columns["carrera"];
                 this.columncodigo = base.Columns["codigo"];
                 this.columncreditos_acade = base.Columns["creditos_acade"];
                 this.columncurso = base.Columns["curso"];
+                this.columnres_ayudantia = base.Columns["res_ayudantia"];
+                this.columnres_pasantia = base.Columns["res_pasantia"];
+                this.columnres_charlaCyT = base.Columns["res_charlaCyT"];
+                this.columnres_charlaNoCyT = base.Columns["res_charlaNoCyT"];
+                this.columnres_otros = base.Columns["res_otros"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -486,10 +522,6 @@ namespace Login1New {
                 base.Columns.Add(this.columnid_usuario);
                 this.columnusuario = new global::System.Data.DataColumn("usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuario);
-                this.columncontraseña = new global::System.Data.DataColumn("contraseña", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontraseña);
-                this.columncheck_usu = new global::System.Data.DataColumn("check_usu", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncheck_usu);
                 this.columncarrera = new global::System.Data.DataColumn("carrera", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncarrera);
                 this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
@@ -498,6 +530,16 @@ namespace Login1New {
                 base.Columns.Add(this.columncreditos_acade);
                 this.columncurso = new global::System.Data.DataColumn("curso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurso);
+                this.columnres_ayudantia = new global::System.Data.DataColumn("res_ayudantia", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnres_ayudantia);
+                this.columnres_pasantia = new global::System.Data.DataColumn("res_pasantia", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnres_pasantia);
+                this.columnres_charlaCyT = new global::System.Data.DataColumn("res_charlaCyT", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnres_charlaCyT);
+                this.columnres_charlaNoCyT = new global::System.Data.DataColumn("res_charlaNoCyT", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnres_charlaNoCyT);
+                this.columnres_otros = new global::System.Data.DataColumn("res_otros", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnres_otros);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_usuario}, true));
                 this.columnid_usuario.AutoIncrement = true;
@@ -507,7 +549,6 @@ namespace Login1New {
                 this.columnid_usuario.ReadOnly = true;
                 this.columnid_usuario.Unique = true;
                 this.columnusuario.MaxLength = 50;
-                this.columncontraseña.MaxLength = 50;
                 this.columncarrera.MaxLength = 50;
                 this.columncurso.MaxLength = 50;
             }
@@ -679,38 +720,6 @@ namespace Login1New {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string contraseña {
-                get {
-                    try {
-                        return ((string)(this[this.tableUsuarios.contraseñaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'contraseña\' de la tabla \'Usuarios\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUsuarios.contraseñaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int check_usu {
-                get {
-                    try {
-                        return ((int)(this[this.tableUsuarios.check_usuColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'check_usu\' de la tabla \'Usuarios\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUsuarios.check_usuColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string carrera {
                 get {
                     try {
@@ -775,6 +784,86 @@ namespace Login1New {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int res_ayudantia {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsuarios.res_ayudantiaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'res_ayudantia\' de la tabla \'Usuarios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuarios.res_ayudantiaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int res_pasantia {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsuarios.res_pasantiaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'res_pasantia\' de la tabla \'Usuarios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuarios.res_pasantiaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int res_charlaCyT {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsuarios.res_charlaCyTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'res_charlaCyT\' de la tabla \'Usuarios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuarios.res_charlaCyTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int res_charlaNoCyT {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsuarios.res_charlaNoCyTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'res_charlaNoCyT\' de la tabla \'Usuarios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuarios.res_charlaNoCyTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int res_otros {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsuarios.res_otrosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'res_otros\' de la tabla \'Usuarios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuarios.res_otrosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsusuarioNull() {
                 return this.IsNull(this.tableUsuarios.usuarioColumn);
             }
@@ -783,30 +872,6 @@ namespace Login1New {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetusuarioNull() {
                 this[this.tableUsuarios.usuarioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscontraseñaNull() {
-                return this.IsNull(this.tableUsuarios.contraseñaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcontraseñaNull() {
-                this[this.tableUsuarios.contraseñaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ischeck_usuNull() {
-                return this.IsNull(this.tableUsuarios.check_usuColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setcheck_usuNull() {
-                this[this.tableUsuarios.check_usuColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -855,6 +920,66 @@ namespace Login1New {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcursoNull() {
                 this[this.tableUsuarios.cursoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isres_ayudantiaNull() {
+                return this.IsNull(this.tableUsuarios.res_ayudantiaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setres_ayudantiaNull() {
+                this[this.tableUsuarios.res_ayudantiaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isres_pasantiaNull() {
+                return this.IsNull(this.tableUsuarios.res_pasantiaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setres_pasantiaNull() {
+                this[this.tableUsuarios.res_pasantiaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isres_charlaCyTNull() {
+                return this.IsNull(this.tableUsuarios.res_charlaCyTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setres_charlaCyTNull() {
+                this[this.tableUsuarios.res_charlaCyTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isres_charlaNoCyTNull() {
+                return this.IsNull(this.tableUsuarios.res_charlaNoCyTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setres_charlaNoCyTNull() {
+                this[this.tableUsuarios.res_charlaNoCyTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isres_otrosNull() {
+                return this.IsNull(this.tableUsuarios.res_otrosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setres_otrosNull() {
+                this[this.tableUsuarios.res_otrosColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1019,24 +1144,23 @@ namespace Login1New.BDusuarioDataSetTableAdapters {
             tableMapping.DataSetTable = "Usuarios";
             tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
             tableMapping.ColumnMappings.Add("usuario", "usuario");
-            tableMapping.ColumnMappings.Add("contraseña", "contraseña");
-            tableMapping.ColumnMappings.Add("check_usu", "check_usu");
             tableMapping.ColumnMappings.Add("carrera", "carrera");
             tableMapping.ColumnMappings.Add("codigo", "codigo");
             tableMapping.ColumnMappings.Add("creditos_acade", "creditos_acade");
             tableMapping.ColumnMappings.Add("curso", "curso");
+            tableMapping.ColumnMappings.Add("res_ayudantia", "res_ayudantia");
+            tableMapping.ColumnMappings.Add("res_pasantia", "res_pasantia");
+            tableMapping.ColumnMappings.Add("res_charlaCyT", "res_charlaCyT");
+            tableMapping.ColumnMappings.Add("res_charlaNoCyT", "res_charlaNoCyT");
+            tableMapping.ColumnMappings.Add("res_otros", "res_otros");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Usuarios] WHERE (([id_usuario] = @Original_id_usuario) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_contraseña = 1 AND [contraseña] IS NULL) OR ([contraseña] = @Original_contraseña)) AND ((@IsNull_check_usu = 1 AND [check_usu] IS NULL) OR ([check_usu] = @Original_check_usu)) AND ((@IsNull_carrera = 1 AND [carrera] IS NULL) OR ([carrera] = @Original_carrera)) AND ((@IsNull_codigo = 1 AND [codigo] IS NULL) OR ([codigo] = @Original_codigo)) AND ((@IsNull_creditos_acade = 1 AND [creditos_acade] IS NULL) OR ([creditos_acade] = @Original_creditos_acade)) AND ((@IsNull_curso = 1 AND [curso] IS NULL) OR ([curso] = @Original_curso)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Usuarios] WHERE (([id_usuario] = @Original_id_usuario) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_carrera = 1 AND [carrera] IS NULL) OR ([carrera] = @Original_carrera)) AND ((@IsNull_codigo = 1 AND [codigo] IS NULL) OR ([codigo] = @Original_codigo)) AND ((@IsNull_creditos_acade = 1 AND [creditos_acade] IS NULL) OR ([creditos_acade] = @Original_creditos_acade)) AND ((@IsNull_curso = 1 AND [curso] IS NULL) OR ([curso] = @Original_curso)) AND ((@IsNull_res_ayudantia = 1 AND [res_ayudantia] IS NULL) OR ([res_ayudantia] = @Original_res_ayudantia)) AND ((@IsNull_res_pasantia = 1 AND [res_pasantia] IS NULL) OR ([res_pasantia] = @Original_res_pasantia)) AND ((@IsNull_res_charlaCyT = 1 AND [res_charlaCyT] IS NULL) OR ([res_charlaCyT] = @Original_res_charlaCyT)) AND ((@IsNull_res_charlaNoCyT = 1 AND [res_charlaNoCyT] IS NULL) OR ([res_charlaNoCyT] = @Original_res_charlaNoCyT)) AND ((@IsNull_res_otros = 1 AND [res_otros] IS NULL) OR ([res_otros] = @Original_res_otros)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_contraseña", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_check_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "check_usu", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_check_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "check_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_carrera", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "carrera", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_carrera", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "carrera", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1045,37 +1169,66 @@ namespace Login1New.BDusuarioDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_creditos_acade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "creditos_acade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_curso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "curso", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_curso", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "curso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_ayudantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_ayudantia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_ayudantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_ayudantia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_pasantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_pasantia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_pasantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_pasantia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_charlaCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaCyT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_charlaCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaCyT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_charlaNoCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaNoCyT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_charlaNoCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaNoCyT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_otros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_otros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Usuarios] ([usuario], [contraseña], [check_usu], [carrera], [codigo], [creditos_acade], [curso]) VALUES (@usuario, @contraseña, @check_usu, @carrera, @codigo, @creditos_acade, @curso);
-SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_acade, curso FROM Usuarios WHERE (id_usuario = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Usuarios] ([usuario], [carrera], [codigo], [creditos_acade], [curso], [res_ayudantia], [res_pasantia], [res_charlaCyT], [res_charlaNoCyT], [res_otros]) VALUES (@usuario, @carrera, @codigo, @creditos_acade, @curso, @res_ayudantia, @res_pasantia, @res_charlaCyT, @res_charlaNoCyT, @res_otros);
+SELECT id_usuario, usuario, carrera, codigo, creditos_acade, curso, res_ayudantia, res_pasantia, res_charlaCyT, res_charlaNoCyT, res_otros FROM Usuarios WHERE (id_usuario = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@check_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "check_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@carrera", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "carrera", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@creditos_acade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "creditos_acade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@curso", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "curso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_ayudantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_ayudantia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_pasantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_pasantia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_charlaCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaCyT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_charlaNoCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaNoCyT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_otros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Usuarios] SET [usuario] = @usuario, [contraseña] = @contraseña, [check_usu] = @check_usu, [carrera] = @carrera, [codigo] = @codigo, [creditos_acade] = @creditos_acade, [curso] = @curso WHERE (([id_usuario] = @Original_id_usuario) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_contraseña = 1 AND [contraseña] IS NULL) OR ([contraseña] = @Original_contraseña)) AND ((@IsNull_check_usu = 1 AND [check_usu] IS NULL) OR ([check_usu] = @Original_check_usu)) AND ((@IsNull_carrera = 1 AND [carrera] IS NULL) OR ([carrera] = @Original_carrera)) AND ((@IsNull_codigo = 1 AND [codigo] IS NULL) OR ([codigo] = @Original_codigo)) AND ((@IsNull_creditos_acade = 1 AND [creditos_acade] IS NULL) OR ([creditos_acade] = @Original_creditos_acade)) AND ((@IsNull_curso = 1 AND [curso] IS NULL) OR ([curso] = @Original_curso)));
-SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_acade, curso FROM Usuarios WHERE (id_usuario = @id_usuario)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Usuarios] SET [usuario] = @usuario, [carrera] = @carrera, [codigo] " +
+                "= @codigo, [creditos_acade] = @creditos_acade, [curso] = @curso, [res_ayudantia]" +
+                " = @res_ayudantia, [res_pasantia] = @res_pasantia, [res_charlaCyT] = @res_charla" +
+                "CyT, [res_charlaNoCyT] = @res_charlaNoCyT, [res_otros] = @res_otros WHERE (([id_" +
+                "usuario] = @Original_id_usuario) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL" +
+                ") OR ([usuario] = @Original_usuario)) AND ((@IsNull_carrera = 1 AND [carrera] IS" +
+                " NULL) OR ([carrera] = @Original_carrera)) AND ((@IsNull_codigo = 1 AND [codigo]" +
+                " IS NULL) OR ([codigo] = @Original_codigo)) AND ((@IsNull_creditos_acade = 1 AND" +
+                " [creditos_acade] IS NULL) OR ([creditos_acade] = @Original_creditos_acade)) AND" +
+                " ((@IsNull_curso = 1 AND [curso] IS NULL) OR ([curso] = @Original_curso)) AND ((" +
+                "@IsNull_res_ayudantia = 1 AND [res_ayudantia] IS NULL) OR ([res_ayudantia] = @Or" +
+                "iginal_res_ayudantia)) AND ((@IsNull_res_pasantia = 1 AND [res_pasantia] IS NULL" +
+                ") OR ([res_pasantia] = @Original_res_pasantia)) AND ((@IsNull_res_charlaCyT = 1 " +
+                "AND [res_charlaCyT] IS NULL) OR ([res_charlaCyT] = @Original_res_charlaCyT)) AND" +
+                " ((@IsNull_res_charlaNoCyT = 1 AND [res_charlaNoCyT] IS NULL) OR ([res_charlaNoC" +
+                "yT] = @Original_res_charlaNoCyT)) AND ((@IsNull_res_otros = 1 AND [res_otros] IS" +
+                " NULL) OR ([res_otros] = @Original_res_otros)));\r\nSELECT id_usuario, usuario, ca" +
+                "rrera, codigo, creditos_acade, curso, res_ayudantia, res_pasantia, res_charlaCyT" +
+                ", res_charlaNoCyT, res_otros FROM Usuarios WHERE (id_usuario = @id_usuario)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@check_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "check_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@carrera", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "carrera", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@creditos_acade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "creditos_acade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@curso", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "curso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_ayudantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_ayudantia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_pasantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_pasantia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_charlaCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaCyT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_charlaNoCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaNoCyT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@res_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_otros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_contraseña", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_check_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "check_usu", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_check_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "check_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_carrera", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "carrera", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_carrera", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "carrera", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1084,6 +1237,16 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_creditos_acade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "creditos_acade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_curso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "curso", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_curso", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "curso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_ayudantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_ayudantia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_ayudantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_ayudantia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_pasantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_pasantia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_pasantia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_pasantia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_charlaCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaCyT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_charlaCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaCyT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_charlaNoCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaNoCyT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_charlaNoCyT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_charlaNoCyT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_res_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_otros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_res_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "res_otros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1100,8 +1263,8 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_acad" +
-                "e, curso FROM dbo.Usuarios";
+            this._commandCollection[0].CommandText = "SELECT id_usuario, usuario, carrera, codigo, creditos_acade, curso, res_ayudantia" +
+                ", res_pasantia, res_charlaCyT, res_charlaNoCyT, res_otros FROM dbo.Usuarios";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1162,7 +1325,7 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_usuario, string Original_usuario, string Original_contraseña, global::System.Nullable<int> Original_check_usu, string Original_carrera, global::System.Nullable<int> Original_codigo, global::System.Nullable<int> Original_creditos_acade, string Original_curso) {
+        public virtual int Delete(int Original_id_usuario, string Original_usuario, string Original_carrera, global::System.Nullable<int> Original_codigo, global::System.Nullable<int> Original_creditos_acade, string Original_curso, global::System.Nullable<int> Original_res_ayudantia, global::System.Nullable<int> Original_res_pasantia, global::System.Nullable<int> Original_res_charlaCyT, global::System.Nullable<int> Original_res_charlaNoCyT, global::System.Nullable<int> Original_res_otros) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_usuario));
             if ((Original_usuario == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -1172,53 +1335,77 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_usuario));
             }
-            if ((Original_contraseña == null)) {
+            if ((Original_carrera == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_contraseña));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_carrera));
             }
-            if ((Original_check_usu.HasValue == true)) {
+            if ((Original_codigo.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_check_usu.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_codigo.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_carrera == null)) {
+            if ((Original_creditos_acade.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_creditos_acade.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_carrera));
-            }
-            if ((Original_codigo.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_codigo.Value));
-            }
-            else {
+            if ((Original_curso == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_creditos_acade.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_curso));
+            }
+            if ((Original_res_ayudantia.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_creditos_acade.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_res_ayudantia.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_curso == null)) {
+            if ((Original_res_pasantia.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_res_pasantia.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
+            if ((Original_res_charlaCyT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_res_charlaCyT.Value));
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_curso));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_res_charlaNoCyT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_res_charlaNoCyT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_res_otros.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_res_otros.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1240,48 +1427,66 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string usuario, string contraseña, global::System.Nullable<int> check_usu, string carrera, global::System.Nullable<int> codigo, global::System.Nullable<int> creditos_acade, string curso) {
+        public virtual int Insert(string usuario, string carrera, global::System.Nullable<int> codigo, global::System.Nullable<int> creditos_acade, string curso, global::System.Nullable<int> res_ayudantia, global::System.Nullable<int> res_pasantia, global::System.Nullable<int> res_charlaCyT, global::System.Nullable<int> res_charlaNoCyT, global::System.Nullable<int> res_otros) {
             if ((usuario == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(usuario));
             }
-            if ((contraseña == null)) {
+            if ((carrera == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(contraseña));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(carrera));
             }
-            if ((check_usu.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(check_usu.Value));
+            if ((codigo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(codigo.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((carrera == null)) {
+            if ((creditos_acade.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(creditos_acade.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(carrera));
-            }
-            if ((codigo.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(codigo.Value));
-            }
-            else {
+            if ((curso == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((creditos_acade.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(creditos_acade.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(curso));
+            }
+            if ((res_ayudantia.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(res_ayudantia.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((curso == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((res_pasantia.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(res_pasantia.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(curso));
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((res_charlaCyT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(res_charlaCyT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((res_charlaNoCyT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(res_charlaNoCyT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((res_otros.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(res_otros.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1305,20 +1510,26 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     string usuario, 
-                    string contraseña, 
-                    global::System.Nullable<int> check_usu, 
                     string carrera, 
                     global::System.Nullable<int> codigo, 
                     global::System.Nullable<int> creditos_acade, 
                     string curso, 
+                    global::System.Nullable<int> res_ayudantia, 
+                    global::System.Nullable<int> res_pasantia, 
+                    global::System.Nullable<int> res_charlaCyT, 
+                    global::System.Nullable<int> res_charlaNoCyT, 
+                    global::System.Nullable<int> res_otros, 
                     int Original_id_usuario, 
                     string Original_usuario, 
-                    string Original_contraseña, 
-                    global::System.Nullable<int> Original_check_usu, 
                     string Original_carrera, 
                     global::System.Nullable<int> Original_codigo, 
                     global::System.Nullable<int> Original_creditos_acade, 
                     string Original_curso, 
+                    global::System.Nullable<int> Original_res_ayudantia, 
+                    global::System.Nullable<int> Original_res_pasantia, 
+                    global::System.Nullable<int> Original_res_charlaCyT, 
+                    global::System.Nullable<int> Original_res_charlaNoCyT, 
+                    global::System.Nullable<int> Original_res_otros, 
                     int id_usuario) {
             if ((usuario == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -1326,100 +1537,142 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(usuario));
             }
-            if ((contraseña == null)) {
+            if ((carrera == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(contraseña));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(carrera));
             }
-            if ((check_usu.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(check_usu.Value));
+            if ((codigo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(codigo.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((carrera == null)) {
+            if ((creditos_acade.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(creditos_acade.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(carrera));
-            }
-            if ((codigo.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(codigo.Value));
-            }
-            else {
+            if ((curso == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((creditos_acade.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(creditos_acade.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(curso));
+            }
+            if ((res_ayudantia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(res_ayudantia.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((curso == null)) {
+            if ((res_pasantia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(res_pasantia.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(curso));
+            if ((res_charlaCyT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(res_charlaCyT.Value));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_usuario));
-            if ((Original_usuario == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((res_charlaNoCyT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(res_charlaNoCyT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((res_otros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(res_otros.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_usuario));
-            }
-            if ((Original_contraseña == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id_usuario));
+            if ((Original_usuario == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_contraseña));
-            }
-            if ((Original_check_usu.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_check_usu.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_usuario));
             }
             if ((Original_carrera == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_carrera));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_carrera));
             }
             if ((Original_codigo.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_codigo.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_codigo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_creditos_acade.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_creditos_acade.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_creditos_acade.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_curso == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_curso));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_curso));
             }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(id_usuario));
+            if ((Original_res_ayudantia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_res_ayudantia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Original_res_pasantia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_res_pasantia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_res_charlaCyT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_res_charlaCyT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_res_charlaNoCyT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_res_charlaNoCyT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_res_otros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_res_otros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(id_usuario));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1440,8 +1693,29 @@ SELECT id_usuario, usuario, contraseña, check_usu, carrera, codigo, creditos_ac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string usuario, string contraseña, global::System.Nullable<int> check_usu, string carrera, global::System.Nullable<int> codigo, global::System.Nullable<int> creditos_acade, string curso, int Original_id_usuario, string Original_usuario, string Original_contraseña, global::System.Nullable<int> Original_check_usu, string Original_carrera, global::System.Nullable<int> Original_codigo, global::System.Nullable<int> Original_creditos_acade, string Original_curso) {
-            return this.Update(usuario, contraseña, check_usu, carrera, codigo, creditos_acade, curso, Original_id_usuario, Original_usuario, Original_contraseña, Original_check_usu, Original_carrera, Original_codigo, Original_creditos_acade, Original_curso, Original_id_usuario);
+        public virtual int Update(
+                    string usuario, 
+                    string carrera, 
+                    global::System.Nullable<int> codigo, 
+                    global::System.Nullable<int> creditos_acade, 
+                    string curso, 
+                    global::System.Nullable<int> res_ayudantia, 
+                    global::System.Nullable<int> res_pasantia, 
+                    global::System.Nullable<int> res_charlaCyT, 
+                    global::System.Nullable<int> res_charlaNoCyT, 
+                    global::System.Nullable<int> res_otros, 
+                    int Original_id_usuario, 
+                    string Original_usuario, 
+                    string Original_carrera, 
+                    global::System.Nullable<int> Original_codigo, 
+                    global::System.Nullable<int> Original_creditos_acade, 
+                    string Original_curso, 
+                    global::System.Nullable<int> Original_res_ayudantia, 
+                    global::System.Nullable<int> Original_res_pasantia, 
+                    global::System.Nullable<int> Original_res_charlaCyT, 
+                    global::System.Nullable<int> Original_res_charlaNoCyT, 
+                    global::System.Nullable<int> Original_res_otros) {
+            return this.Update(usuario, carrera, codigo, creditos_acade, curso, res_ayudantia, res_pasantia, res_charlaCyT, res_charlaNoCyT, res_otros, Original_id_usuario, Original_usuario, Original_carrera, Original_codigo, Original_creditos_acade, Original_curso, Original_res_ayudantia, Original_res_pasantia, Original_res_charlaCyT, Original_res_charlaNoCyT, Original_res_otros, Original_id_usuario);
         }
     }
     
