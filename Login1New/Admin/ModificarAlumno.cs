@@ -254,7 +254,6 @@ namespace Login1New
                     string auxRes= reg["res_ayudantia"].ToString();
                     if(auxRes=="")
                     {
-                        MessageBox.Show("Es nulo");
                         auxRes = "0";
                     }
                     residuo = Convert.ToInt32(auxRes);
@@ -433,6 +432,11 @@ namespace Login1New
             HomeAdmin ventana = new HomeAdmin();
             this.Dispose();
             ventana.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

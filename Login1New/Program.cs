@@ -16,7 +16,7 @@ namespace Login1New
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeAdmin());
+            Application.Run(new Login());
         }
     }
 }

@@ -43,19 +43,22 @@ namespace Login1New
                     if (Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"]) == 0)
                     {
                         HomeAdmin VenAd = new HomeAdmin();
+                        VenAd.labelAux.Text = usuario;
                         Hide();
                         VenAd.Show();
                     }
                     else if (Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"]) == 1)
                     {
                         HomeDocente VenDoc = new HomeDocente();
-                        this.Close();
+                        VenDoc.labelAux1.Text = usuario;
+                        Hide();
                         VenDoc.Show();
                     }
                     else if (Convert.ToInt32(ds.Tables[0].Rows[0]["check_usu"]) == 2)
                     {
                         HomeAlumno VenUsu = new HomeAlumno();
-                        this.Close();
+                        VenUsu.labelAux2.Text = usuario;
+                        Hide();
                         VenUsu.Show();
                     }
                     else

@@ -35,8 +35,12 @@
             this.eliminarAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeAlumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.docenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarDocenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarDocenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EmpresaToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.agraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validarEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reglasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verReglamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +58,14 @@
             this.comboBoxCarrera = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.comboBoxCurso = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmpresa = new System.Windows.Forms.ComboBox();
+            this.comboBoxHabilitar = new System.Windows.Forms.ComboBox();
+            this.listaDeDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxOldPass = new System.Windows.Forms.TextBox();
+            this.textBoxNewPass = new System.Windows.Forms.TextBox();
+            this.textBoxNewPass2 = new System.Windows.Forms.TextBox();
+            this.labelAux = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +76,7 @@
             this.docenteToolStripMenuItem,
             this.EmpresaToolStrip,
             this.reglasToolStripMenuItem,
+            this.cambiarToolStripMenuItem,
             this.cerrarSesionToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -87,41 +100,61 @@
             // agregarAlumnoToolStripMenuItem
             // 
             this.agregarAlumnoToolStripMenuItem.Name = "agregarAlumnoToolStripMenuItem";
-            this.agregarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.agregarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarAlumnoToolStripMenuItem.Text = "Agregar Alumno";
             this.agregarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.agregarAlumnoToolStripMenuItem_Click);
             // 
             // modificarAlumnoToolStripMenuItem
             // 
             this.modificarAlumnoToolStripMenuItem.Name = "modificarAlumnoToolStripMenuItem";
-            this.modificarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.modificarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarAlumnoToolStripMenuItem.Text = "Modificar Alumno";
             this.modificarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.modificarAlumnoToolStripMenuItem_Click);
             // 
             // eliminarAlumnoToolStripMenuItem
             // 
             this.eliminarAlumnoToolStripMenuItem.Name = "eliminarAlumnoToolStripMenuItem";
-            this.eliminarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.eliminarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarAlumnoToolStripMenuItem.Text = "Eliminar Alumno";
             this.eliminarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.eliminarAlumnoToolStripMenuItem_Click);
             // 
             // listaDeAlumnosToolStripMenuItem
             // 
             this.listaDeAlumnosToolStripMenuItem.Name = "listaDeAlumnosToolStripMenuItem";
-            this.listaDeAlumnosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.listaDeAlumnosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaDeAlumnosToolStripMenuItem.Text = "Lista de Alumnos";
             this.listaDeAlumnosToolStripMenuItem.Click += new System.EventHandler(this.listaDeAlumnosToolStripMenuItem_Click);
             // 
             // docenteToolStripMenuItem
             // 
+            this.docenteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarDocenteToolStripMenuItem,
+            this.eliminarDocenteToolStripMenuItem,
+            this.listaDeDocentesToolStripMenuItem});
             this.docenteToolStripMenuItem.Name = "docenteToolStripMenuItem";
             this.docenteToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.docenteToolStripMenuItem.Text = "Docente";
             // 
+            // agregarDocenteToolStripMenuItem
+            // 
+            this.agregarDocenteToolStripMenuItem.Name = "agregarDocenteToolStripMenuItem";
+            this.agregarDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarDocenteToolStripMenuItem.Text = "Agregar Docente";
+            this.agregarDocenteToolStripMenuItem.Click += new System.EventHandler(this.agregarDocenteToolStripMenuItem_Click);
+            // 
+            // eliminarDocenteToolStripMenuItem
+            // 
+            this.eliminarDocenteToolStripMenuItem.Name = "eliminarDocenteToolStripMenuItem";
+            this.eliminarDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarDocenteToolStripMenuItem.Text = "Eliminar Docente";
+            this.eliminarDocenteToolStripMenuItem.Click += new System.EventHandler(this.eliminarDocenteToolStripMenuItem_Click);
+            // 
             // EmpresaToolStrip
             // 
             this.EmpresaToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agraToolStripMenuItem});
+            this.agraToolStripMenuItem,
+            this.anularEmpresaToolStripMenuItem,
+            this.validarEmpresaToolStripMenuItem});
             this.EmpresaToolStrip.Name = "EmpresaToolStrip";
             this.EmpresaToolStrip.Size = new System.Drawing.Size(64, 20);
             this.EmpresaToolStrip.Text = "Empresa";
@@ -130,9 +163,23 @@
             // agraToolStripMenuItem
             // 
             this.agraToolStripMenuItem.Name = "agraToolStripMenuItem";
-            this.agraToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.agraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agraToolStripMenuItem.Text = "Agregar Empresa";
             this.agraToolStripMenuItem.Click += new System.EventHandler(this.agraToolStripMenuItem_Click);
+            // 
+            // anularEmpresaToolStripMenuItem
+            // 
+            this.anularEmpresaToolStripMenuItem.Name = "anularEmpresaToolStripMenuItem";
+            this.anularEmpresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anularEmpresaToolStripMenuItem.Text = "Invalidar Empresa";
+            this.anularEmpresaToolStripMenuItem.Click += new System.EventHandler(this.anularEmpresaToolStripMenuItem_Click);
+            // 
+            // validarEmpresaToolStripMenuItem
+            // 
+            this.validarEmpresaToolStripMenuItem.Name = "validarEmpresaToolStripMenuItem";
+            this.validarEmpresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.validarEmpresaToolStripMenuItem.Text = "Validar Empresa";
+            this.validarEmpresaToolStripMenuItem.Click += new System.EventHandler(this.validarEmpresaToolStripMenuItem_Click);
             // 
             // reglasToolStripMenuItem
             // 
@@ -148,7 +195,7 @@
             // verReglamentoToolStripMenuItem
             // 
             this.verReglamentoToolStripMenuItem.Name = "verReglamentoToolStripMenuItem";
-            this.verReglamentoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.verReglamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verReglamentoToolStripMenuItem.Text = "Ver Reglamento";
             this.verReglamentoToolStripMenuItem.Click += new System.EventHandler(this.verReglamentoToolStripMenuItem_Click);
             // 
@@ -183,6 +230,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.textBox1.Location = new System.Drawing.Point(384, 114);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 20);
@@ -194,7 +243,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(384, 228);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 20);
+            this.textBox2.Size = new System.Drawing.Size(273, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
             // 
@@ -226,7 +275,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(384, 175);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 20);
+            this.textBox3.Size = new System.Drawing.Size(273, 20);
             this.textBox3.TabIndex = 7;
             this.textBox3.Visible = false;
             // 
@@ -307,6 +356,75 @@
             this.comboBoxCurso.TabIndex = 14;
             this.comboBoxCurso.Visible = false;
             // 
+            // comboBoxEmpresa
+            // 
+            this.comboBoxEmpresa.FormattingEnabled = true;
+            this.comboBoxEmpresa.Location = new System.Drawing.Point(385, 174);
+            this.comboBoxEmpresa.Name = "comboBoxEmpresa";
+            this.comboBoxEmpresa.Size = new System.Drawing.Size(272, 21);
+            this.comboBoxEmpresa.TabIndex = 15;
+            this.comboBoxEmpresa.Visible = false;
+            // 
+            // comboBoxHabilitar
+            // 
+            this.comboBoxHabilitar.FormattingEnabled = true;
+            this.comboBoxHabilitar.Location = new System.Drawing.Point(385, 174);
+            this.comboBoxHabilitar.Name = "comboBoxHabilitar";
+            this.comboBoxHabilitar.Size = new System.Drawing.Size(272, 21);
+            this.comboBoxHabilitar.TabIndex = 16;
+            this.comboBoxHabilitar.Visible = false;
+            // 
+            // listaDeDocentesToolStripMenuItem
+            // 
+            this.listaDeDocentesToolStripMenuItem.Name = "listaDeDocentesToolStripMenuItem";
+            this.listaDeDocentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDeDocentesToolStripMenuItem.Text = "Lista de Docentes";
+            this.listaDeDocentesToolStripMenuItem.Click += new System.EventHandler(this.listaDeDocentesToolStripMenuItem_Click);
+            // 
+            // cambiarToolStripMenuItem
+            // 
+            this.cambiarToolStripMenuItem.Name = "cambiarToolStripMenuItem";
+            this.cambiarToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.cambiarToolStripMenuItem.Text = "Cambiar contraseña";
+            this.cambiarToolStripMenuItem.Click += new System.EventHandler(this.cambiarToolStripMenuItem_Click);
+            // 
+            // textBoxOldPass
+            // 
+            this.textBoxOldPass.Location = new System.Drawing.Point(385, 114);
+            this.textBoxOldPass.Name = "textBoxOldPass";
+            this.textBoxOldPass.PasswordChar = '*';
+            this.textBoxOldPass.Size = new System.Drawing.Size(272, 20);
+            this.textBoxOldPass.TabIndex = 17;
+            this.textBoxOldPass.Visible = false;
+            // 
+            // textBoxNewPass
+            // 
+            this.textBoxNewPass.Location = new System.Drawing.Point(385, 175);
+            this.textBoxNewPass.Name = "textBoxNewPass";
+            this.textBoxNewPass.PasswordChar = '*';
+            this.textBoxNewPass.Size = new System.Drawing.Size(272, 20);
+            this.textBoxNewPass.TabIndex = 18;
+            this.textBoxNewPass.Visible = false;
+            // 
+            // textBoxNewPass2
+            // 
+            this.textBoxNewPass2.Location = new System.Drawing.Point(385, 228);
+            this.textBoxNewPass2.Name = "textBoxNewPass2";
+            this.textBoxNewPass2.PasswordChar = '*';
+            this.textBoxNewPass2.Size = new System.Drawing.Size(272, 20);
+            this.textBoxNewPass2.TabIndex = 19;
+            this.textBoxNewPass2.Visible = false;
+            // 
+            // labelAux
+            // 
+            this.labelAux.AutoSize = true;
+            this.labelAux.Location = new System.Drawing.Point(694, 65);
+            this.labelAux.Name = "labelAux";
+            this.labelAux.Size = new System.Drawing.Size(35, 13);
+            this.labelAux.TabIndex = 20;
+            this.labelAux.Text = "label6";
+            this.labelAux.Visible = false;
+            // 
             // HomeAdmin
             // 
             this.AcceptButton = this.BtnAceptar;
@@ -317,9 +435,11 @@
             this.BackgroundImage = global::Login1New.Properties.Resources.Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 411);
-            this.Controls.Add(this.comboBoxCurso);
+            this.Controls.Add(this.labelAux);
+            this.Controls.Add(this.textBoxNewPass2);
+            this.Controls.Add(this.textBoxNewPass);
+            this.Controls.Add(this.textBoxOldPass);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBoxCarrera);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -332,6 +452,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.comboBoxHabilitar);
+            this.Controls.Add(this.comboBoxEmpresa);
+            this.Controls.Add(this.comboBoxCarrera);
+            this.Controls.Add(this.comboBoxCurso);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -377,5 +501,17 @@
         private System.Windows.Forms.ComboBox comboBoxCarrera;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBoxCurso;
+        private System.Windows.Forms.ToolStripMenuItem anularEmpresaToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxEmpresa;
+        private System.Windows.Forms.ToolStripMenuItem validarEmpresaToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxHabilitar;
+        private System.Windows.Forms.ToolStripMenuItem agregarDocenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarDocenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeDocentesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxOldPass;
+        private System.Windows.Forms.TextBox textBoxNewPass;
+        private System.Windows.Forms.TextBox textBoxNewPass2;
+        public System.Windows.Forms.Label labelAux;
     }
 }

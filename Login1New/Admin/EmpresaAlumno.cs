@@ -28,7 +28,7 @@ namespace Login1New.Admin
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("El Alumno no ha realizado ninguna pasantia");
             }
             DataTable Horas = Utilidades.ObtenerEmpresa("SELECT horas FROM Pasantia WHERE nombre='"+labelNombre.Text.Trim()+"'");
             for (int i = 0; i < Horas.Rows.Count; i++)

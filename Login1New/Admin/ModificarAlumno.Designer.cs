@@ -282,6 +282,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(384, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // agregarHoras
             // 
@@ -383,9 +384,9 @@
             // 
             // txtAyudantia
             // 
-            this.txtAyudantia.Location = new System.Drawing.Point(247, 292);
+            this.txtAyudantia.Location = new System.Drawing.Point(313, 292);
             this.txtAyudantia.Name = "txtAyudantia";
-            this.txtAyudantia.Size = new System.Drawing.Size(101, 20);
+            this.txtAyudantia.Size = new System.Drawing.Size(35, 20);
             this.txtAyudantia.TabIndex = 25;
             this.txtAyudantia.Visible = false;
             // 
@@ -453,10 +454,10 @@
             this.Controls.Add(this.txtAyudantia);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBoxPas);
-            this.Controls.Add(this.BtnModAl);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.BtnAceptarCamb);
+            this.Controls.Add(this.Aceptar);
+            this.Controls.Add(this.BtnModAl);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;

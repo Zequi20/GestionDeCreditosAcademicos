@@ -7,7 +7,7 @@
     <ProjectGuid>{8EB7B19A-23C8-4BFC-8C09-9F38134CB136}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Login1New</RootNamespace>
-    <AssemblyName>svdh</AssemblyName>
+    <AssemblyName>CAE</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -70,6 +70,12 @@
     <Compile Include="Admin\ListaDeAlumnos.Designer.cs">
       <DependentUpon>ListaDeAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ListaDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ListaDocente.Designer.cs">
+      <DependentUpon>ListaDocente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ReglamentoCAE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ListaDeAlumnos.resx">
       <DependentUpon>ListaDeAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ListaDocente.resx">
+      <DependentUpon>ListaDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ReglamentoCAE.resx">
       <DependentUpon>ReglamentoCAE.cs</DependentUpon>

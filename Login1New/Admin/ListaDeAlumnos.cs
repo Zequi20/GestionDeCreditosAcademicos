@@ -22,7 +22,7 @@ namespace Login1New.Admin
         {
             // TODO: esta línea de código carga datos en la tabla 'bDusuarioDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
             //this.usuariosTableAdapter.Fill(this.bDusuarioDataSet.Usuarios);
-            DataTable tabla = Utilidades.ObtenerEmpresa("SELECT id_usuario,usuario,codigo,curso,carrera,creditos_acade FROM Usuarios WHERE check_usu = 2");
+            DataTable tabla = Utilidades.ObtenerEmpresa("SELECT usuario,codigo,curso,carrera,creditos_acade FROM Usuarios WHERE check_usu = 2");
             Lista.DataSource = tabla;
         }
     }
