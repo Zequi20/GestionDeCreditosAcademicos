@@ -130,9 +130,9 @@ namespace Login1New
                             textBox5.Text = "";
                         }
                     }
-                    catch(Exception)
+                    catch(Exception error)
                     {
-                        MessageBox.Show("Valor incorrecto","Error");
+                        MessageBox.Show("Valor incorrecto"+error.Message, "Error");
                     }
                 }
                 else
@@ -299,7 +299,6 @@ namespace Login1New
                                     modAl.label11.Text = usuario;
                                     MessageBox.Show("Usuario valido");
                                     this.Hide();
-                                    //modAl.MostrarDatos(textBox1.Text, carrera, curso, codigo, creditos, id);
                                     modAl.Show();
                                 }
                                 else

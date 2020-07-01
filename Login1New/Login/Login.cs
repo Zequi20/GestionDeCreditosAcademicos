@@ -67,9 +67,9 @@ namespace Login1New
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception)
             {
-                MessageBox.Show("Se ha producido un error." + error.Message);
+                MessageBox.Show("Se ha producido un error.\nUsuario o Contraseña incorrecta." );
             }
         }
     }

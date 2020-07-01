@@ -15,38 +15,14 @@ namespace Login1New
 {
     public partial class ModificarAlumno : Form
     {
-        /*string idusu;
-        string nombre;
-        string carreFa;
-        string cod;
-        string cur;
-        string credi;*/
         int cons=0;
-        bool check = true;
-        Credito cae = new Credito();
-        EmpresaAlumno empresa = new EmpresaAlumno();
+        bool check = true; 
+        Credito cae = new Credito(); // Clase que realiza los calculos de los creditos
+        EmpresaAlumno empresa = new EmpresaAlumno(); //ventana que muestra informacion sobre las empresas
         public ModificarAlumno()
         {
             InitializeComponent();
-            //MostrarDatos(nombre, carreFa, cod, cur, credi, idusu);
         }
-
-        /*public void MostrarDatos(string nombre, string carreFa, string cur, string cod, string credi, string idusu)
-        {
-            name.Visible = false;
-            codigo.Visible = false;
-            comboBox1.Visible = false;
-            comboBox2.Visible = false;
-            label3.Text = nombre;
-            label4.Text = carreFa;
-            label6.Text = cod;
-            label8.Text = cur;
-            label10.Text = credi;
-            BtnAceptarCamb.Visible = false;
-            BtnCancelarCamb.Visible = false;
-            label11.Text = idusu;
-            label10.Text = credi;
-        }*/
 
         private void BtnModAl_Click(object sender, EventArgs e)
         {
@@ -132,6 +108,7 @@ namespace Login1New
 
         private void ModificarAlumno_Load(object sender, EventArgs e)
         {
+            //Se obtiene los datos del alumno
             SqlDataReader reader = Utilidades.Consulta("SELECT usuario,carrera,codigo,curso,creditos_acade FROM Usuarios WHERE usuario ='"+label11.Text.Trim()+"'");
             if(reader.Read())
             {
@@ -142,6 +119,7 @@ namespace Login1New
                 label10.Text = reader["creditos_acade"].ToString();
             }
             empresa.labelNombre.Text = label3.Text;
+            //Se obtienen los nombres de las empresas en un Data Table y luego se listan
             DataTable Nombres=Utilidades.ObtenerEmpresa("SELECT nombre FROM Empresas WHERE check_baja='1'");
             for(int i=0;i<Nombres.Rows.Count;i++)
             {
@@ -248,6 +226,7 @@ namespace Login1New
                 {
                     MessageBox.Show("Formato Invalido");
                 }
+             
                 SqlDataReader reg = Utilidades.Consulta("SELECT creditos_acade,res_ayudantia FROM Usuarios WHERE usuario='"+label3.Text+"'");
                 if (reg.Read())
                 {
@@ -267,6 +246,7 @@ namespace Login1New
                         creditosNew++;
                         residuoNew -= 16;
                     }
+                    //Se modifican los datos en la base de datos
                     Utilidades.Consulta("UPDATE Usuarios SET creditos_acade = '"+creditosNew+ "'  WHERE usuario = '" + label3.Text + "'");
                     Utilidades.Consulta("UPDATE Usuarios SET res_ayudantia = '"+residuoNew+"'  WHERE usuario = '" + label3.Text + "'");
                     MessageBox.Show("Creditos acumulados: " + creditosNew + "\nResiduo a favor: " + residuoNew, "Info");

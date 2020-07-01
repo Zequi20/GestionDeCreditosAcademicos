@@ -36,8 +36,12 @@
             // 
             this.ListaDoc.AllowUserToAddRows = false;
             this.ListaDoc.AllowUserToDeleteRows = false;
+            this.ListaDoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ListaDoc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ListaDoc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.ListaDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaDoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListaDoc.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ListaDoc.Location = new System.Drawing.Point(0, 0);
             this.ListaDoc.Name = "ListaDoc";
             this.ListaDoc.ReadOnly = true;
